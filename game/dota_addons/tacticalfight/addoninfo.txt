@@ -1,0 +1,11 @@
+"AddonInfo"
+{
+  "TeamCount" "2"
+  "maps"      "battlefield"
+  "IsPlayable"  "1"
+  "battlefield"
+  {
+    "MaxPlayers"                    "2"
+  }
+ }
+

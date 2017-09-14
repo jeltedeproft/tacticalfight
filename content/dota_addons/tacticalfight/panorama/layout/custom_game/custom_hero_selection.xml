@@ -1,0 +1,103 @@
+<root>
+    <styles>
+		<include src="file://{resources}/styles/dotastyles.css" />
+    <include src="file://{resources}/styles/multiteam_hero_select_overlay.css" />
+    </styles>
+
+    <scripts>
+        <include src="file://{resources}/scripts/custom_hero_selection.js" />
+    </scripts>
+
+  <!-- Hero list
+  ==================================================================-->
+  <Panel class="HeroSelectTeamsContainer" hittest="false">
+    <Panel id="PickTextPanel" hittest="false">
+      <Panel id='PickTimer' hittest="false">
+        <Label id='TimerTxt' text="" hittest="false"/>
+      </Panel>
+      <Label id="HeroSelectText" text="Select a hero" class="Centralized" hittest="false"/>
+    </Panel>
+
+    <!-- Pick list (showing options) -->
+    <Panel id="PickList" hittest="false">
+      <Image src="file://{images}/custom_game/download.png" scaling="stretch" class="BackGround" hittest="false"/>
+
+      <Panel id="npc_dota_hero_earth_spirit" class="ClassOption" hittest="true"
+        onactivate="SelectHero('custom_earth_spirit','npc_dota_hero_earth_spirit')" 
+        style="background-image: url('file://{images}/loadingscreens/vanquishing_demons_loading_screen/loadingscreen.tga');" />
+      <DOTAHeroImage heroname="npc_dota_hero_earth_spirit" class="Centralized"/>
+
+      <Panel id="npc_dota_hero_pudge" class="ClassOption2" hittest="true"
+        onactivate="SelectHero('custom_pudge','npc_dota_hero_pudge')" 
+        style="background-image: url('file://{images}/loadingscreens/scavenger_of_basilisk/loadingscreen.tga');" />
+      <DOTAHeroImage heroname="npc_dota_hero_pudge" class="Centralized3"/>
+
+      <Panel id="npc_dota_hero_techies" class="ClassOption3" hittest="true"
+        onactivate="SelectHero('techies_custom','npc_dota_hero_techies')" 
+        style="background-image: url('file://{images}/loadingscreens/summit2_loadingscreen/loadingscreen.tga');" />
+      <DOTAHeroImage heroname="npc_dota_hero_techies" class="Centralized4"/>
+
+      <Panel id="npc_dota_hero_omniknight" class="ClassOption4" hittest="true"
+        onactivate="SelectHero('omni_custom','npc_dota_hero_omniknight')" 
+        style="background-image: url('file://{images}/loadingscreens/heavenly_light/loadingscreen.tga');" />
+      <DOTAHeroImage heroname="npc_dota_hero_omniknight" class="Centralized5"/>
+
+      <Panel id="npc_dota_hero_windrunner" class="ClassOption5" hittest="true"
+        onactivate="SelectHero('windranger_custom','npc_dota_hero_windrunner')" 
+        style="background-image: url('file://{images}/loadingscreens/artgerm_wr/loadingscreen.tga');" />
+      <DOTAHeroImage heroname="npc_dota_hero_windrunner" class="Centralized6"/>
+
+      <Panel id="npc_dota_hero_axe" class="ClassOption6" hittest="true"
+        onactivate="SelectHero('axe_custom','npc_dota_hero_axe')" 
+        style="background-image: url('file://{images}/loadingscreens/harbingerwar_loadingscreen/loadingscreen.tga');" />
+      <DOTAHeroImage heroname="npc_dota_hero_axe" class="Centralized7"/>
+
+      <Panel id="npc_dota_hero_spirit_breaker" class="ClassOption7" hittest="true"
+        onactivate="SelectHero('spirit_breaker_custom','npc_dota_hero_spirit_breaker')" 
+        style="background-image: url('file://{images}/loadingscreens/stalwart_loadingscreen/loadingscreen.tga');" />
+      <DOTAHeroImage heroname="npc_dota_hero_spirit_breaker" class="Centralized8"/>
+
+      <Panel id="npc_dota_hero_vengefulspirit" class="ClassOption8" hittest="true"
+        onactivate="SelectHero('venge_custom','npc_dota_hero_vengefulspirit')" 
+        style="background-image: url('file://{images}/loadingscreens/dreadhawk_loadingscreen/loadingscreen.tga');" />
+      <DOTAHeroImage heroname="npc_dota_hero_vengefulspirit" class="Centralized9"/>
+
+      <Panel id="npc_dota_hero_riki" class="ClassOption9" hittest="true"
+        onactivate="SelectHero('riki_custom','npc_dota_hero_riki')" 
+        style="background-image: url('file://{images}/loadingscreens/rightful_heir_loading_screen/loadingscreen.tga');" />
+      <DOTAHeroImage heroname="npc_dota_hero_riki" class="Centralized10"/>
+
+      <Panel id="npc_dota_hero_zuus" class="ClassOption10" hittest="true"
+        onactivate="SelectHero('zeus_custom','npc_dota_hero_zuus')" 
+        style="background-image: url('file://{images}/loadingscreens/storm_spring_loadingscreen/loadingscreen.tga');" />
+      <DOTAHeroImage heroname="npc_dota_hero_zuus" class="Centralized11"/>
+
+      <Panel id="npc_dota_hero_chen" class="ClassOption11" hittest="true"
+        onactivate="SelectHero('chen_custom','npc_dota_hero_chen')" 
+        style="background-image: url('file://{images}/loadingscreens/ancient_rhythm_loading_screen/loadingscreen.tga');" />
+      <DOTAHeroImage heroname="npc_dota_hero_chen" class="Centralized12"/>
+    </Panel>
+
+    <!-- Next Turn button
+    ==================================================================-->
+    <Button id="next_turn"  class="NextTurnButton" onactivate="SkipTurn()">
+      <Image src="file://{images}/custom_game/flag.png"/>
+    </Button>
+
+
+    <Panel id="HeroesPicked" class="Hero_selection_0">
+      <Label id="HeroSelectTxt" text="These are the heroes u have selected :" class="topleft"/>
+      <Label id="HeroSelectTxtt" text="These are the heroes u have selected :" class="topright"/>
+      <DOTAHeroImage id="hero_1_radiant" heroname="" class="Hero_selection_0"/>
+      <DOTAHeroImage id="hero_2_radiant" heroname="" class="Hero_selection_1"/>
+      <DOTAHeroImage id="hero_3_radiant" heroname="" class="Hero_selection_2"/>
+      <DOTAHeroImage id="hero_4_radiant" heroname="" class="Hero_selection_3"/>
+      <DOTAHeroImage id="hero_5_radiant" heroname="" class="Hero_selection_4"/>
+      <DOTAHeroImage id="hero_1_dire" heroname="" class="Hero_selection_5"/>
+      <DOTAHeroImage id="hero_2_dire" heroname="" class="Hero_selection_6"/>
+      <DOTAHeroImage id="hero_3_dire" heroname="" class="Hero_selection_7"/>
+      <DOTAHeroImage id="hero_4_dire" heroname="" class="Hero_selection_8"/>
+      <DOTAHeroImage id="hero_5_dire" heroname="" class="Hero_selection_9"/>
+    </Panel>
+  </Panel>
+</root>
